@@ -1,0 +1,11 @@
+<div class="d-flex flex-column">
+    <button class="float-end bg-success mb-3 text-nowrap" mat-flat-button (click)="goToBookmarks()">To Bookmarks</button>
+
+    <div class="container-lg">
+        <app-search></app-search>
+        <app-repositories [source$]="service.repositories$"></app-repositories>
+        <mat-spinner *ngIf="service.loader$ | async" class="spinner center"></mat-spinner>
+
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+.spinner {
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+}
+button {
+width: 100px;
+}

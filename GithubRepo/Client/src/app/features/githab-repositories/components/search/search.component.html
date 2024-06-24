@@ -1,0 +1,20 @@
+<div class="d-lg-flex flex-lg-row gap-2 justify-content-center align-items-center">
+    <form [formGroup]="searchForm" class="d-lg-flex flex-row" (ngSubmit)="searchRepositories()">
+        <mat-form-field appearance="outline">
+            <mat-label>Search repositories ...</mat-label>
+            <input class="w-100" matInput  (keypress.enter)="searchRepositories()" [formControl]="searchControl">
+            <mat-error class="" *ngIf="searchControl.hasError('required')">
+                Search is required
+            </mat-error>
+            <mat-error class="" *ngIf="searchControl.hasError('minlength')">
+                Search must be at least 3 characters
+            </mat-error>
+        </mat-form-field>
+
+        <button class="m-lg-2" type="submit"  mat-raised-button>Search</button>
+
+    </form>
+
+
+
+</div>

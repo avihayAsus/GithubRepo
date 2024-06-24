@@ -1,0 +1,12 @@
+
+<div *ngIf="(source$ | async) as repositories else  noContent"
+    class="d-flex flex-wrap flex-s-nowrap gap-4 align-items-baseline justify-content-center my-2">
+
+    <div *ngFor="let repository of repositories">
+        <app-repository class="" [repository]="repository!"></app-repository>
+    </div>
+</div>
+
+<ng-template  #noContent>
+    <div *ngIf="!(githubService.loader$ | async)" class="center text-center d-flex justify-content-center my-5">No Content</div>
+</ng-template>
