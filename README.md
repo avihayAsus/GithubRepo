@@ -7,7 +7,6 @@
 - Angular
 - .NET Core
 
-D
 
 ## Getting Started
 ### Backend (.NET Core)
